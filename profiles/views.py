@@ -12,7 +12,11 @@ class ProfileList(APIView):
         return Response(serializer.data)
 
 class ProfileDetail(APIView):
+    
+    # adds class attribute to give a form with fields 
+    # specified in ProfileSerialiser class when updating profile
     serializer_class = ProfileSerializer
+    
     def get_object(self, pk):
         try:
             profile = Profile.objects.get(pk=pk)
