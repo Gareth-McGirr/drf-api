@@ -22,5 +22,5 @@ class ProfileDetail(generics.RetrieveUpdateAPIView):
     """
     serializer_class = ProfileSerializer
     permission_classes = [IsOwnerOrReadOnly]
-    pueryset = Profile.objects.all()
+    queryset = Profile.objects.all()
 
