@@ -18,4 +18,3 @@ class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Comment.objects.all()
 
-    
